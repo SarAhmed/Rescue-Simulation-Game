@@ -178,10 +178,8 @@ public class CommandCenter implements SOSListener {
 
 		@Override
 
-		public void actionPerformed(ActionEvent e) { // added
-//			view.getGrid().getCells()[0][0].setIcon(new ImageIcon(view.getGrid().getCommandCentreUnitImg().getScaledInstance(70, 40, Image.SCALE_SMOOTH)));
-//			view.getGrid().revalidate();
-//			view.getGrid().repaint();
+		public void actionPerformed(ActionEvent e) { 
+
 			DownPanel.setRespondClicked(false);
 			UnitPanel.setUnitPanelClicked(false, null);
 			Grid.setGridClicked(false);
@@ -190,33 +188,7 @@ public class CommandCenter implements SOSListener {
 			DownPanel.getRespondButton().setBackground(null);
 
 			CommandCenter.commandCenter.getEngine().nextCycle();
-			// testing recommendation
-//			recommendation.setEvacuator();
-//			recommendation.setCollapseBuildings();
-//			recommendation.setFireBuildings();
-//			recommendation.setFireTruck();
-//			recommendation.setGasControl();
-//			recommendation.setGasleakBuildings();
-//			recommendation.setAmbulance();
-//			recommendation.setinjuriedCitizen();
-//			recommendation.setDiseaseControl();
-//			recommendation.setinfectedCitizen();
-//			//
-//			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-//			System.out.println("Evacuators-----------");
-//			System.out.print(recommend.recommendEvacuator());
-//			System.out.println("FireTruck------------");
-//			System.out.print(recommend.recommendFireTruck());
-//			System.out.println("GAsControlUnit-------");
-//			System.out.print(recommend.recommendGasControl());
-//			System.out.println("Ambulance------------");
-//			System.out.print(recommend.recommendAmbulance());
-//			System.out.println("DiseaseControlUnit---");
-//			System.out.print(recommend.recommendDiseaseControl());
-//			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-//
-//			//
-			DownPanel.getCurrCycle().setText("  Current cycle: " + commandCenter.getEngine().getCurrentCycle());
+					DownPanel.getCurrCycle().setText("  Current cycle: " + commandCenter.getEngine().getCurrentCycle());
 			DownPanel.getCasualities().setText("   Casualities :" + commandCenter.getEngine().calculateCasualties());
 			view.getDownPanel().getTextArea().setText(commandCenter.getEngine().getLogString());
 			try {
